@@ -5,6 +5,8 @@
   "main": "server/app.js",
   "scripts": {
     "start": "node server/app.js",
+    "start-watch": "nodemon server/app.js",
+    "deploy": "git push heroku master",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -19,6 +21,11 @@
   },
   "homepage": "https://github.com/leggsimon/heroku-postgres-spike#readme",
   "dependencies": {
-    "express": "^4.16.2"
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "hbs": "^4.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.14.11"
   }
 }

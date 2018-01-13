@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>{{title}}</title>
+</head>
+
+<body>
+	<h1>{{message}}</h1>
+	<form action="/movies/create" method="post">
+		<label for="movieTitle">Title</label>
+		<input type="text" name="title" id="movieTitle">
+		<label for="director">Director</label>
+		<input type="text" name="director" id="director">
+		<label for="releaseYear">Year</label>
+		<input type="number", name="year" id="releaseYear" min="1896" max={{currentYear}} value={{currentYear}}>
+		<input type="submit" value="Add">
+	</form>
+
+	<ul>
+		{{#each movies}}
+			<li>{{title}} by {{director}} in {{year}}</li>
+		{{/each}}
+	</ul>
+</body>
+
+</html>
+
