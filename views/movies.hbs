@@ -12,11 +12,11 @@
 	<h1>{{message}}</h1>
 	<form action="/movies/create" method="post">
 		<label for="movieTitle">Title</label>
-		<input type="text" name="title" id="movieTitle">
+		<input type="text" name="title" id="movieTitle" required="true">
 		<label for="director">Director</label>
-		<input type="text" name="director" id="director">
+		<input type="text" name="director" id="director" required="true">
 		<label for="releaseYear">Year</label>
-		<input type="number", name="year" id="releaseYear" min="1896" max={{currentYear}} value={{currentYear}}>
+		<input type="number", name="year" id="releaseYear" min="1896" max={{currentYear}} value={{currentYear}} required="true">
 		<input type="submit" value="Add">
 	</form>
 
